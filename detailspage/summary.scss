@@ -10,6 +10,7 @@
 
     width: 100%;
     max-width: 1200px;
+    height: 100%;
 
     @include mq(desktop, max){
         flex-direction: column;
@@ -36,6 +37,7 @@
 
         @include mq(mobile, max){
             max-width: 360px;
+            height: 100%;
         }
     }
     &__item{
@@ -56,7 +58,7 @@
     }
     &__picture{
         width: 250px;
-        height: 400px;
+        height: 450px;
 
         @include mq(desktop, max){
             width: 270px;
@@ -100,7 +102,19 @@
             max-width: 360px;
         }
     }
+    &__castaside{
+        display: flex;
+        flex-direction: column;
+        max-height: 450px;
+        @include mq(desktop, max){
+            padding-top: 20px;
+        }
+        @include mq(mobile, max){
+            max-height: 700px;
+        }
+    }
     &__cast{
+        padding-top: 10px;
         display: grid;
         grid-template-columns: repeat(3, calc(100% / 3.5));
         grid-column-gap: 36px;
@@ -109,7 +123,7 @@
         width: 500px;
        
         @include mq(desktop, max){
-            margin-top: 40px;
+            margin-top: 20px;
             grid-column-gap: 50px;
             width: 700px;
         }
@@ -119,6 +133,20 @@
             grid-column-gap: 30px;
             max-width: 360px;
             max-height: 600px;
+        }
+    }
+    &__castheader{
+        margin: 0px;
+        padding: 0px;
+
+        color: rgb(255, 255, 255);
+
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+
+        @include mq(mobile, max){
+            text-align: center;
         }
     }
     &__info{
