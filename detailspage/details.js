@@ -133,8 +133,8 @@ function showDetail(id){
     })
 }
 
+let seasonSection = document.querySelector("[data-scroll]");
 function selectSeason(event){
-    let seasonSection = document.querySelector("[data-scroll]");
     seasonSection.scrollIntoView(true)
     let buttons = document.querySelectorAll('[data-button]');
     buttons.forEach(item => {
@@ -225,6 +225,7 @@ function getEpisodes(seasonEpisodeId){
     })
 }
 function selectBoxSeason(event){
+    seasonSection.scrollIntoView(true)
     let seasonIndex = selectBox.options[selectBox.selectedIndex];
     let seasonId = seasonIndex.getAttribute("select-season-number");
     let seasonEpisodeId = seasonIndex.getAttribute("select-season-episode-id");
