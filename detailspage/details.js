@@ -8,7 +8,7 @@ if(isTvShows){
 }
 
 let selectBox = document.querySelector('[data-select]');
-
+let subject = document.querySelector('[data-subject]');
 
 function showDetail(id){
 
@@ -33,10 +33,11 @@ function showDetail(id){
         name.innerHTML = seriesName.toUpperCase();
 
         let summary = response.summary;
-        let subject = document.querySelector('[data-subject]');
-        subject.innerHTML = summary;
+        let summarySection = `
+            <div data-summary-text class="-showSummary">${summary}</div>
+        `
+        subject.insertAdjacentHTML("afterbegin", summarySection);
     }).catch(error => {
-        let subject = document.querySelector('[data-subject]');
         subject.innerHTML = `This Tv Show Faulty.`;
     })
 
@@ -117,10 +118,12 @@ function showDetail(id){
             selectBox.insertAdjacentHTML("beforeend",selectBoxOption);
 
         });
+
         let seasonButton = document.querySelectorAll('[data-button]');
         seasonButton.forEach(button => {
             button.addEventListener('click', selectSeason);
         });
+
         seasonButton[0].classList.add("-selectedSeason");
         getSummary(season[0].id, season[0].number);
         getEpisodes(season[0].id);
@@ -224,6 +227,24 @@ function getEpisodes(seasonEpisodeId){
         episodeParent.insertAdjacentHTML("beforeend", errorHandle);
     })
 }
+
+let summaryTextParent = document.querySelector('[data-subject]'); 
+let summaryButton = document.querySelector("[data-summary-button]");
+summaryButton.addEventListener('click', showMore)
+function showMore(){
+    let isPressedButton = summaryButton.getAttribute("data-summary-button");
+    if(isPressedButton == "true"){
+        summaryTextParent.classList.add("-active");
+        summaryButton.setAttribute("data-summary-button", "false");
+        summaryButton.innerHTML = "Less Show";
+        return false;
+    }
+    summaryTextParent.classList.remove("-active");
+    summaryButton.setAttribute("data-summary-button", "true");
+    summaryButton.innerHTML = "Read More";
+    return true;
+}
+
 function selectBoxSeason(event){
     seasonSection.scrollIntoView(true)
     let seasonIndex = selectBox.options[selectBox.selectedIndex];

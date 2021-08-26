@@ -79,6 +79,11 @@
         font-weight: 600;
         font-size: 36px;
     }
+    &__content{
+        min-height: 350px;
+        max-height: 350px;
+        overflow: hidden;
+    }
     &__subject{
         margin-left: 34px;
         display: flex;
@@ -176,4 +181,27 @@
         height: 150px;
         object-fit: cover;
     }
+}
+.summary__button{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    width: 120px;
+    height: 30px;
+    border: 0px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.-active{
+    max-height: 100%;
 }
