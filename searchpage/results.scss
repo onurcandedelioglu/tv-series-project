@@ -1,0 +1,46 @@
+@import "../assets/scss/mixin/responsive.scss";
+.results{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include mq(desktop, max){
+        max-width: 700px;
+    }
+    @include mq(mobile, max){
+        max-width: 360px;
+    }
+    &__aside{
+        width: calc(100% / 5.5);
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        text-decoration: none;
+        cursor: pointer;
+        @include mq(desktop, max){
+            width: calc(100% / 3.5);
+        }
+        @include mq(mobile, max){
+            width: calc(100% / 2.5);
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__imdb{
+        color: rgb(246, 199, 0);
+    }
+}
+.error{
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-top: 40px;
+}
+.-mobileNone{
+    @include mq(mobile, max){
+        display: none;
+    }
+}

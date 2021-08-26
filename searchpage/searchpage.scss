@@ -1,0 +1,19 @@
+@import "../assets/scss/mixin/responsive.scss";
+
+@import "./results.scss";
+
+.searchpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+    //min-height: 100%;
+    @include mq(desktop, max){
+        max-width: 700px;
+    }
+    @include mq(mobile, max){
+        max-width: 360px;
+    }
+}

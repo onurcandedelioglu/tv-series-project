@@ -1,0 +1,36 @@
+@import "./mixin/responsive.scss";
+.footer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    
+    background-color: rgb(2, 2, 4);
+    &__aside{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: 100%;
+        max-width: 1200px;
+        
+        @include mq(desktop, max){
+            max-width: 700px;
+        }
+        
+        @include mq(mobile, max){
+            flex-direction: column;
+            max-width: 400px;
+        }
+    }
+    &__text{
+        opacity: 0.4;
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+    }
+}

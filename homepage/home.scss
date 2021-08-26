@@ -1,0 +1,21 @@
+@import "slider.scss";
+@import "search.scss";
+@import "popular.scss";
+
+.homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    
+    width: 100%;
+    max-width: 1200px;
+    
+    @include mq(desktop, max){
+		max-width: 700px;
+	}
+
+    @include mq(mobile, max){
+        max-width: 400px;
+    }
+}
