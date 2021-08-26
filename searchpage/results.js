@@ -33,46 +33,7 @@ const showResults = (seriesName) => {
     .then(response => {
         let index=0;
         response.forEach(item => {
-            // response.null;
             try{
-                
-            //     let data = {
-            //         id: item.show.id,
-            //         image: item.show.image.medium,
-            //         name: item.show.name,
-            //         genres: item.show.genres,
-            //         date: item.show.premiered,
-            //         country: item.show.network.country.name,
-            //         webChannel: item.show.webChannel.country.name,
-            //         language: item.show.language,
-            //         imdb: item.show.rating.average
-            //     } 
-                
-            //     console.log(data);
-
-            //     if(data.id == null || data.image == null || data.image == null || data.name == null) throw "This Tv Show Faulty";
-            //     let tvSeriesId = data.id; 
-            //     let tvSeriesImage = data.medium;
-            //     let tvSeriesName = data.name; 
-                
-            //     let tvSeriesGenres =data.genres;
-            //     if(data.genres.length == 0 ||data.genres == null) tvSeriesGenres = "-";
-
-            //     let tvSeriesDate =data.premiered;
-            //     if(data.premiered == null) tvSeriesDate = "-";
-                
-            //     let tvSeriesCountry;
-            //     if(data.network == null){  //Böyle Olması Gerekiyor.
-                
-            //         ((data.webChannel == null) ? tvSeriesCountry = "-" : tvSeriesCountry = data.webChannel);    
-                    
-            //     }else tvSeriesCountry = data.network;
-                
-            //     let tvSeriesLanguage = data.language;
-            //     if(data.language == null) tvSeriesLanguage = "-";
-                
-            //     let tvSeriesImdb = data.imdb;
-            //     if(data.imdb == null) tvSeriesImdb = "-";
                 let details = hasDetails(item.show.id, item.show.image, item.show.image.medium, item.show.name);
                 if(details) throw "This Tv Show Faulty";
 
@@ -105,11 +66,6 @@ const showResults = (seriesName) => {
                 index++;
 
             }catch(error){
-                // let errorHandle = 
-                // `
-                //     <p class="error__handle">${error}</p>
-                //  `
-                // resultsItem.insertAdjacentHTML("beforeend",errorHandle);
             }
         });
     }).catch(error => {
