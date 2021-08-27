@@ -177,8 +177,12 @@
     &__select{
         display: none;
         width: 100%;
+
         border: 2px solid gray;
         background-color: transparent;
+        -webkit-appearance: menulist-button;
+        -webkit-appearance: menulist;
+
         color: red;
         outline: none;
         margin-top: 40px;

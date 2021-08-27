@@ -111,6 +111,8 @@ function showDetail(id){
             let premiereDate = item.premiereDate;
             let seasonId = item.id;
 
+            if(premiereDate == null) return; //continue ve break yapılamıyor.
+
             let seasonAside = `
                 <button data-button data-season-number="${number}" data-season-episode-id="${seasonId}" class="season__button">
                     <span class="season__number"> Season ${number}</span>
@@ -136,11 +138,11 @@ function showDetail(id){
         getSummary(season[0].id, season[0].number);
         getEpisodes(season[0].id);
     }).catch(error => {
-        let seasonParent = document.querySelector('[data-season]');
-        let errorHandle = `
-        <p class="error__handle">Season Not Found.</p>
-        `;
-        seasonParent.insertAdjacentHTML("beforeend", errorHandle);
+        // let seasonParent = document.querySelector('[data-season]');
+        // let errorHandle = `
+        // <p class="error__handle">Season Not Found.</p>
+        // `;
+        // seasonParent.insertAdjacentHTML("beforeend", errorHandle);
     })
 }
 
@@ -188,11 +190,11 @@ function getSummary(seasonEpisodeId, seasonNumber){
     .then(response => {
         summaryItem.innerHTML = response.summary;
     }).catch(error => {
-        let summaryItem = document.querySelector('[data-summary]');
-        summaryItem.innerHTML = `Season Summary Not Found.`;
+        // let summaryItem = document.querySelector('[data-summary]');
+        // summaryItem.innerHTML = `Season Summary Not Found.`;
     })
 }
-
+let seriesPicture = document.querySelector('[data-image]').src;
 function getEpisodes(seasonEpisodeId){
 
     let seasonEpisodesEndpoint = `${baseEndpoint}/seasons/${seasonEpisodeId}/episodes`;
@@ -216,23 +218,23 @@ function getEpisodes(seasonEpisodeId){
             let episodeNumber = item.number;
             let episodeName = item.name;
             let episodeImage = item.image.medium;
-
+            if(episodeNumber == null){
+                episodeNumber = "Special";
+            }
             let episodeAside = `
-                <div data-episode-aside=${episodeNumber} class="season__episodeaside">
+                <div data-episode-aside=${episodeNumber} class="season__episodeaside" style="background-image:url(${episodeImage})">
                     <h2 class="season__episodenumber">Episode ${episodeNumber}</h2>
                     <h2 class="season__episodename">${episodeName}</h2>
                 </div>
             `
             episodeParent.insertAdjacentHTML("beforeend", episodeAside);
-            let episodeItem = document.querySelector(`[data-episode-aside="${episodeNumber}"]`);
-            episodeItem.style.backgroundImage = `url(${episodeImage}`;
         });
     }).catch(error => {
-        let episodeParent = document.querySelector('[data-episode]');
-        let errorHandle = `
-        <p data-error class="error__handle">Episodes Not Found.</p>
-        `
-        episodeParent.insertAdjacentHTML("beforeend", errorHandle);
+        // let episodeParent = document.querySelector('[data-episode]');
+        // let errorHandle = `
+        // <p data-error class="error__handle">Episodes Not Found.</p>
+        // `
+        // episodeParent.insertAdjacentHTML("beforeend", errorHandle);
     })
 }
 let detailSubject = document.querySelector('[details-subject]');

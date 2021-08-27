@@ -3,6 +3,8 @@ let searchBar = document.querySelector('[data-menu-input]');
 
 let searchBarInput = document.querySelector('[data-input-aside]');
 searchBarInput.classList.add('-responsiveSearch');
+let searchBarAside = document.querySelector('[data-search-display]');
+searchBarAside.classList.add('-responsiveSearch');
 
 const searchBarText = (seriesName) => {
     searchBar.value = seriesName;
