@@ -9,6 +9,7 @@ if(isTvShows){
 
 let selectBox = document.querySelector('[data-select]');
 let subject = document.querySelector('[data-subject]');
+let summaryButton = document.querySelector("[data-summary-button]");
 
 function showDetail(id){
 
@@ -33,10 +34,17 @@ function showDetail(id){
         name.innerHTML = seriesName.toUpperCase();
 
         let summary = response.summary;
+        summary = summary.replace(/<p[^>]*>/g,"");
+        summary = summary.replace(/<\/?p[^>]*>/g, "");
         let summarySection = `
-            <div data-summary-text class="-showSummary">${summary}</div>
+            <div data-summary-text class="details__summarytext"><p class="details__text">${summary}</p></div>
         `
         subject.insertAdjacentHTML("afterbegin", summarySection);
+        let summaryTextArea = document.querySelector('[data-summary-text]');
+        let summaryTextHeight = summaryTextArea.offsetHeight;
+        if(summaryTextHeight > 360){
+            summaryButton.classList.add('-activeButton');
+        }
     }).catch(error => {
         subject.innerHTML = `This Tv Show Faulty.`;
     })
@@ -227,21 +235,20 @@ function getEpisodes(seasonEpisodeId){
         episodeParent.insertAdjacentHTML("beforeend", errorHandle);
     })
 }
-
-let summaryTextParent = document.querySelector('[data-subject]'); 
-let summaryButton = document.querySelector("[data-summary-button]");
+let detailSubject = document.querySelector('[details-subject]');
 summaryButton.addEventListener('click', showMore)
 function showMore(){
     let isPressedButton = summaryButton.getAttribute("data-summary-button");
     if(isPressedButton == "true"){
-        summaryTextParent.classList.add("-active");
+        subject.classList.add("-active");
         summaryButton.setAttribute("data-summary-button", "false");
         summaryButton.innerHTML = "Less Show";
         return false;
     }
-    summaryTextParent.classList.remove("-active");
+    subject.classList.remove("-active");
     summaryButton.setAttribute("data-summary-button", "true");
     summaryButton.innerHTML = "Read More";
+    detailSubject.scrollIntoView(true)
     return true;
 }
 

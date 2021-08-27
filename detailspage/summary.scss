@@ -75,13 +75,16 @@
     }
     &__header{
         margin: 0px;
+
+        color: rgb(255, 255, 255);
+
         font-family: 'Open Sans', sans-serif;
         font-weight: 600;
         font-size: 36px;
     }
     &__content{
-        min-height: 350px;
-        max-height: 350px;
+        min-height: 360px;
+        max-height: 360px;
         overflow: hidden;
     }
     &__subject{
@@ -90,12 +93,6 @@
         flex-direction: column;
         
         width: 360px;
-        
-        color: rgb(255, 255, 255);
-        
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
         
         @include mq(desktop, max){
             width: 396px;
@@ -106,6 +103,19 @@
             align-items: center;
             max-width: 360px;
         }
+    }
+    &__summarytext{
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        align-items: normal;
+    }
+    &__text{
+        color: rgb(255, 255, 255);
+        
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
     }
     &__castaside{
         display: flex;
@@ -183,6 +193,9 @@
     }
 }
 .summary__button{
+    display: none;
+}
+.-activeButton{
     margin-top: 20px;
 
     display: flex;
