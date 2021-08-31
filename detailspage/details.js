@@ -217,7 +217,10 @@ function getEpisodes(seasonEpisodeId){
         episode.forEach(item => {
             let episodeNumber = item.number;
             let episodeName = item.name;
-            let episodeImage = item.image.medium;
+            let episodeImage;
+            if(item.image == null) episodeImage = document.querySelector("[data-image]").src;
+            else episodeImage = item.image.medium;
+            
             if(episodeNumber == null){
                 episodeNumber = "Special";
             }
