@@ -83,11 +83,11 @@ function showDetail(id){
             count++;
         });
     }).catch(error => {
-        let castParent = document.querySelector('[data-cast]');
-        let errorHandle = `
-        <p class="error__handle">Cast Not Found.</p>
-        `;
-        castParent.insertAdjacentHTML("beforeend", errorHandle);
+        // let castParent = document.querySelector('[data-cast]');
+        // let errorHandle = `
+        // <p class="error__handle">Cast Not Found.</p>
+        // `;
+        // castParent.insertAdjacentHTML("beforeend", errorHandle);
     })
 
     //SEASON
