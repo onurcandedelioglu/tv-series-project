@@ -3,8 +3,8 @@
     
     display: flex;
     flex-direction: row;
-    justify-content: normal;
-    align-items: normal;
+    justify-content: flex-start;
+    align-items: stretch;
 
     width: 100%;
     max-width: 1200px;
@@ -22,8 +22,8 @@
     &__aside{
         display: flex;
         flex-direction: column;
-        justify-content: normal;
-        align-items: normal;
+        justify-content: flex-start;
+        align-items: stretch;
 
         width: 250px;
 
@@ -46,13 +46,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: normal;
+        align-items: stretch;
 
         width: 100%;
         height: 70px;
         
         background-color: transparent;
         border: 0px;
+        border-radius: 4px 0px 0px 4px;
         cursor: pointer;
         &:hover span{
             color: rgb(183, 20, 30);
@@ -103,8 +104,8 @@
         
         display: flex;
         flex-direction: column;
-        justify-content: normal;
-        align-items: normal;
+        justify-content: flex-start;
+        align-items: stretch;
 
         width: 100%;
         max-width: 910px;
@@ -147,7 +148,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: normal;
+        align-items: stretch;
         
         height: 135px;
         
@@ -187,7 +188,8 @@
         color: red;
         outline: none;
         margin-top: 40px;
-        height: 36px;
+        min-height: 40px;
+        border-radius: 4px;
         @include mq(mobile, max){
             display: flex;
         }

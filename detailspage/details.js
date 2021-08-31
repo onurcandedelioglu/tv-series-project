@@ -220,7 +220,6 @@ function getEpisodes(seasonEpisodeId){
             let episodeImage;
             if(item.image == null) episodeImage = document.querySelector("[data-image]").src;
             else episodeImage = item.image.medium;
-            
             if(episodeNumber == null){
                 episodeNumber = "Special";
             }
@@ -228,8 +227,8 @@ function getEpisodes(seasonEpisodeId){
                 <div data-episode-aside=${episodeNumber} class="season__episodeaside" style="background-image:url(${episodeImage})">
                     <h2 class="season__episodenumber">Episode ${episodeNumber}</h2>
                     <h2 class="season__episodename">${episodeName}</h2>
-                </div>
-            `
+                    </div>
+                    `
             episodeParent.insertAdjacentHTML("beforeend", episodeAside);
         });
     }).catch(error => {

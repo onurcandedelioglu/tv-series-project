@@ -95,6 +95,7 @@
         width: 400px;
         height: 36px;
         border: 1px solid grey;
+        border-radius: 4px;
         
         @include mq(mobile, max){
             display: none;

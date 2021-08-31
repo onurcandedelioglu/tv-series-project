@@ -5,8 +5,8 @@
     
     display: flex;
     flex-direction: row;
-    justify-content: normal;
-    align-items: normal;
+    justify-content: flex-start;
+    align-items: stretch;
 
     width: 100%;
     max-width: 1200px;
@@ -25,7 +25,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: normal;
+        align-items: stretch;
 
         width: 100%;
         max-width: 1200px;
@@ -86,6 +86,9 @@
         min-height: 360px;
         max-height: 360px;
         overflow: hidden;
+        @include mq(mobile, max){
+            min-height: auto;
+        }
     }
     &__subject{
         margin-left: 34px;
@@ -107,8 +110,8 @@
     &__summarytext{
         display: flex;
         flex-direction: column;
-        justify-content: normal;
-        align-items: normal;
+        justify-content: flex-start;
+        align-items: stretch;
     }
     &__text{
         color: rgb(255, 255, 255);

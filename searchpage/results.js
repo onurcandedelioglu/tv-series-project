@@ -21,6 +21,7 @@ let isNull = (item) => {
 }
 
 let resultsItem = document.querySelector('[data-results]');
+let resultContent = document.querySelector('[data-content]');
 
 const showResults = (seriesName) => {
     let searchEndpoint = `${baseEndpoint}/search/shows?q=${seriesName}`;
@@ -66,9 +67,8 @@ const showResults = (seriesName) => {
                 let lastImageElement = imageElement[imageElement.length - 1];
                 colorImage(lastImageElement);
                 index++;
-
-            }catch(error){
-            }
+                resultContent.innerHTML = `${index} results found for the word ${seriesName}`
+            }catch(error){}
         });
     }).catch(error => {
         let errorHandle = 

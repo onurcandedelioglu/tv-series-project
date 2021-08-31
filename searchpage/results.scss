@@ -18,6 +18,16 @@
         grid-template-columns: repeat(2, calc(100% / 2.5));
         grid-column-gap: 70px;
     }
+    &__header{
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+    &__content{
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
     &__aside{
         width: 100%;
         display: flex;
