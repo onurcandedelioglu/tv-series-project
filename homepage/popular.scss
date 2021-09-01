@@ -47,7 +47,7 @@
         width: calc(100% / 5.5);
 
         text-decoration: none;
-        transition: transform 0.5s;
+        transition: transform 0.1s;
         transform-style: preserve-3d;
 
         @include mq(desktop, max){
@@ -120,6 +120,10 @@
     &__image{
         width: 100%;
         height: 295px;
+        object-fit: cover;
+        @include mq(mobile, max){
+            height: 225px;
+        }
     }
 }
 svg{

@@ -1,3 +1,4 @@
+@import "../assets/scss/mixin/responsive.scss";
 .season{
     margin-top: 80px;
     
@@ -58,7 +59,6 @@
         &:hover span{
             color: rgb(247, 205, 9);
         }
-
         @include mq(desktop, max){
             max-width: 100%;
         }
@@ -189,9 +189,7 @@
 
         border: 2px solid gray;
         background-color: transparent;
-        -webkit-background-color: transparent;
-        -webkit-appearance: menulist-button;
-        -webkit-appearance: menulist;
+        -webkit-appearance: none;
 
         color: red;
         outline: none;
@@ -208,6 +206,9 @@
 }
 .-selectedSeason{
     background-color: rgb(183, 20, 30);
+    &:hover span{
+        color: rgb(255, 255, 255);
+    }
 }
 .-selectBoxOpen{
     background-color: transparent;
