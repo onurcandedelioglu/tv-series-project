@@ -224,10 +224,12 @@ function getEpisodes(seasonEpisodeId){
                 episodeNumber = "Special";
             }
             let episodeAside = `
-                <div data-episode-aside=${episodeNumber} class="season__episodeaside" style="background-image:url(${episodeImage})">
-                    <h2 class="season__episodenumber">Episode ${episodeNumber}</h2>
-                    <h2 class="season__episodename">${episodeName}</h2>
+                <div data-episode-aside=${episodeNumber} class="season__episodeaside">
+                    <div class="season__episodeitem" style="background-image:url(${episodeImage})">
+                        <h2 class="season__episodenumber">Episode ${episodeNumber}</h2>
                     </div>
+                    <h2 class="season__episodename">${episodeName}</h2>
+                </div>
                     `
             episodeParent.insertAdjacentHTML("beforeend", episodeAside);
         });
@@ -245,11 +247,13 @@ function showMore(){
     let isPressedButton = summaryButton.getAttribute("data-summary-button");
     if(isPressedButton == "true"){
         subject.classList.add("-active");
+        detailSubject.classList.add('-removeafter');
         summaryButton.setAttribute("data-summary-button", "false");
         summaryButton.innerHTML = "Less Show";
         return false;
     }
     subject.classList.remove("-active");
+    detailSubject.classList.remove('-removeafter');
     summaryButton.setAttribute("data-summary-button", "true");
     summaryButton.innerHTML = "Read More";
     detailSubject.scrollIntoView(true)

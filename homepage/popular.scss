@@ -9,7 +9,7 @@
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    
+
     @include mq(mobile, max){
         max-width: 400px;
     }
@@ -37,16 +37,18 @@
             justify-content: space-around;
             max-width: 400px;
         }
+        
     }
     &__link{
-        margin-top: 20px;
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
 
         width: calc(100% / 5.5);
-        height: 440px;
 
         text-decoration: none;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
 
         @include mq(desktop, max){
             width: calc(100% / 3.5);
@@ -55,11 +57,17 @@
         @include mq(mobile, max){
             width: calc(100% / 2.5);
         }
+        &:hover{
+            transform: scale(1.1);
+            @include mq(desktop, max){
+                transform: scale(1);
+            }
+        }
     }
     &__details{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: stretch;
         
         width: 100%;

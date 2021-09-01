@@ -27,7 +27,7 @@
 
         width: 250px;
 
-        border-right: 2px solid rgb(255, 0, 0);
+        border-right: 2px solid rgb(183, 20, 30);
         
         @include mq(desktop, max){
             display: grid;
@@ -56,7 +56,7 @@
         border-radius: 4px 0px 0px 4px;
         cursor: pointer;
         &:hover span{
-            color: rgb(183, 20, 30);
+            color: rgb(247, 205, 9);
         }
 
         @include mq(desktop, max){
@@ -147,18 +147,22 @@
         
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: stretch;
         
         height: 135px;
-        
+    }
+    &__episodeitem{
+        height: 100px;
         object-fit: cover;
-        filter: grayscale(60%);
     }
     &__episodenumber{
         margin: 0px;
         padding: 8px 10px;
         
+        width: max-content;
+        padding: 0px 10px 4px 4px;
+        background-color: rgb(183, 20, 30);
         color: rgb(255, 255, 255);
         
         font-family: 'Open Sans', sans-serif;
@@ -167,8 +171,12 @@
     }
     &__episodename{
         margin: 0px;
-        padding: 8px 10px;
+        padding: 8px 10px 0px 0px;
         
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         color: rgb(255, 255, 255);
         
         font-family: 'Open Sans', sans-serif;
@@ -199,7 +207,7 @@
     }
 }
 .-selectedSeason{
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(183, 20, 30);
 }
 .-selectBoxOpen{
     background-color: transparent;

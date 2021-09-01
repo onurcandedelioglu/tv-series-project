@@ -1,4 +1,5 @@
 @import "../assets/scss/mixin/responsive.scss";
+
 .results{
     width: 100%;
     max-width: 1200px;
@@ -24,17 +25,30 @@
         font-weight: 600;
     }
     &__content{
+        margin: 0px;
+
         color: rgb(255, 255, 255);
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
+
+        opacity: 0.6;
     }
     &__aside{
         width: 100%;
+        max-width: 1200px;
         display: flex;
         flex-direction: column;
         margin-top: 40px;
         text-decoration: none;
         cursor: pointer;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+        &:hover{
+            transform: scale(1.1);
+            @include mq(desktop, max){
+                transform: scale(1);
+            }
+        }
     }
     &__imdb{
         color: rgb(246, 199, 0);

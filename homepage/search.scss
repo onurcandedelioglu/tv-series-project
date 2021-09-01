@@ -76,6 +76,7 @@
     }
 }
 .-responsiveSearch{
+    margin: 10px 0px 10px 0px;
     display: none;
     @include mq(mobile, max){
         display: flex;
