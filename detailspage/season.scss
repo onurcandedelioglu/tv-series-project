@@ -184,12 +184,14 @@
         font-size: 14px;
     }
     &__select{
+        padding-left: 4px;
         display: none;
         width: 100%;
 
         border: 2px solid gray;
         background-color: transparent;
-        -webkit-appearance: none;
+        appearance: none;
+        -webkit-appearance: menulist;
 
         color: red;
         outline: none;
