@@ -1,5 +1,6 @@
 let baseEndpoint = "https://api.tvmaze.com";
 let searchBar = document.querySelector('[data-menu-input]');
+let secondSearchBar = document.querySelector('[data-input]');
 
 let searchBarInput = document.querySelector('[data-input-aside]');
 searchBarInput.classList.add('-responsiveSearch');
@@ -8,6 +9,7 @@ searchBarAside.classList.add('-responsiveSearch');
 
 const searchBarText = (seriesName) => {
     searchBar.value = seriesName;
+    secondSearchBar.value = seriesName;
 };
 
 let hasDetails = (id, image, medium, name) => {
