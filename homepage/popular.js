@@ -19,7 +19,7 @@ function popularTvSeries(){
     fetch(showsEndpoint)
     .then(response => {
         if(!response.ok) {
-                throw "There were no results";
+                throw "Failed To Sort Popular List";
             }
         return response.json();
     })
@@ -40,7 +40,7 @@ function popularTvSeries(){
         let topTenSeries = response.slice(Math.max(response.length - 10, 1));
         showPopularImage(topTenSeries)
     }).catch(error => {
-        alert(`Failed To Sort Popular List`);
+        alert(`${error}`);
     })
 }
 function showPopularImage(topTen){
