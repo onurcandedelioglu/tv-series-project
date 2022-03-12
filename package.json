@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css",
+    "start": "node server.js & npm run scss"
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,10 @@
   },
   "homepage": "https://github.com/onotogo/tv-series-project#readme",
   "devDependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
+    "node-sass": "^7.0.1",
     "nunjucks": "^3.2.3",
-    "parcel-bundler": "^1.12.5",
-    "parcel-plugin-nunjucks": "^2.2.2",
     "sass": "^1.37.5",
     "swiper": "^6.8.1"
   }

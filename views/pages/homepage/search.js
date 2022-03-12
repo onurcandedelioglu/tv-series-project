@@ -5,7 +5,7 @@ menuInputBox.addEventListener('keyup',changeMenuUrl);
 function changeMenuUrl(event){
     if(event.key == 'Enter') window.location.href = menuButton.href;
     let menuInputText = menuInputBox.value;
-    menuButton.href = `./searchpage.html?series=${menuInputText}`;
+    menuButton.href = `./searchpage?series=${menuInputText}`;
 }
 
 let searchBarButton = document.querySelector('[data-search-button]');
@@ -15,5 +15,5 @@ inputBox.addEventListener('keyup',changeBarUrl);
 function changeBarUrl(event){
     if(event.key == 'Enter') window.location.href = searchBarButton.href;
     let searchBarText = inputBox.value;
-    searchBarButton.href = `./searchpage.html?series=${searchBarText}`;
+    searchBarButton.href = `./searchpage?series=${searchBarText}`;
 }

@@ -1,0 +1,41 @@
+[
+    {
+        "id": 2,
+        "name": "Person Of Interest",
+        "language": "English",
+        "genres": "Action",
+        "premiered": "2011-09-22",
+        "rating": 8.9,
+        "image": "",
+        "summary": "Test",
+        "castName": "Deneme",
+        "castImage": "",
+        "characterName": "Test" 
+    },
+    {
+        "id": 2,
+        "name": "Sherlock",
+        "language": "English",
+        "genres": "Action",
+        "premiered": "2011-09-22",
+        "rating": 9,
+        "image": "",
+        "summary": "Test",
+        "castName": "Deneme",
+        "castImage": "",
+        "characterName": "Test" 
+    },
+    {
+        "id": 3,
+        "name": "Test",
+        "language": "English",
+        "genres": "Action",
+        "premiered": "2011-09-22",
+        "rating": 7,
+        "image": "",
+        "summary": "Test",
+        "castName": "Deneme",
+        "castImage": "",
+        "characterName": "Test" 
+    }
+]

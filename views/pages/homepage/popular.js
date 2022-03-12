@@ -1,4 +1,4 @@
-let baseEndpoint = "https://api.tvmaze.com";
+let baseEndpoint = "/api";
 
 let imageUrlId = [335,66,44,123,43677];
 imageUrl();
@@ -7,14 +7,14 @@ function imageUrl(){
     for(let index = 0; index < 5; index++){
         let imageLinkItem = document.querySelectorAll(`[data-link="${index}"]`);
         imageLinkItem.forEach(item => {
-            item.href = `./details.html?id=${imageUrlId[index]}`;
+            item.href = `./details?id=${imageUrlId[index]}`;
         })
     }
 }
 
 popularTvSeries();
 function popularTvSeries(){
-    let showsEndpoint = `${baseEndpoint}/shows`;
+    let showsEndpoint = `${baseEndpoint}/series`;
     
     fetch(showsEndpoint)
     .then(response => {
@@ -78,6 +78,6 @@ function showPopularImage(topTen){
         seriesGenresItem.innerHTML = seriesGenres
         
         let seriesId = series.id;
-        popularCard.href = `./details.html?id=${seriesId}`;
+        popularCard.href = `./details?id=${seriesId}`;
     }
 }

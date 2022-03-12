@@ -1,4 +1,4 @@
-let baseEndpoint = "https://api.tvmaze.com";
+let baseEndpoint = "/api";
 let searchBar = document.querySelector('[data-menu-input]');
 let secondSearchBar = document.querySelector('[data-input]');
 
@@ -26,7 +26,7 @@ let resultsItem = document.querySelector('[data-results]');
 let resultContent = document.querySelector('[data-content]');
 
 const showResults = (seriesName) => {
-    let searchEndpoint = `${baseEndpoint}/search/shows?q=${seriesName}`;
+    let searchEndpoint = `${baseEndpoint}/series?name=${seriesName}`;
 
     fetch(searchEndpoint)
     .then(response => {

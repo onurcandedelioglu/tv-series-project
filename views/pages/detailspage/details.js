@@ -1,4 +1,4 @@
-let baseEndpoint = "https://api.tvmaze.com";
+let baseEndpoint = "/api";
 let params = new URLSearchParams(window.location.search);
 
 let isTvShows = params.has('id');
@@ -15,7 +15,7 @@ function showDetail(id){
 
     //SHOW DETAILS
 
-    let detailsEndpoint = `${baseEndpoint}/shows/${id}`;
+    let detailsEndpoint = `${baseEndpoint}/series?id=${id}`;
 
     fetch(detailsEndpoint)
     .then(response => {
@@ -51,7 +51,7 @@ function showDetail(id){
 
     //CAST
 
-    let castEndpoint = `${baseEndpoint}/shows/${id}/cast`;
+    let castEndpoint = `${baseEndpoint}/seriesid?id=${id}`;
     
     fetch(castEndpoint)
     .then(response => {
@@ -92,7 +92,7 @@ function showDetail(id){
 
     //SEASON
 
-    let seasonEndpoint = `${baseEndpoint}/shows/${id}/seasons`;
+    let seasonEndpoint = `${baseEndpoint}/season?id=${id}`;
     
     fetch(seasonEndpoint)
     .then(response => {
@@ -174,7 +174,7 @@ function selectSeason(event){
 
 
 function getSummary(seasonEpisodeId, seasonNumber){
-    let seasonEndpoint = `${baseEndpoint}/seasons/${seasonEpisodeId}`;
+    let seasonEndpoint = `${baseEndpoint}/season?seasonid=${seasonEpisodeId}`;
     let summaryItem = document.querySelector('[data-summary]');
 
     let seasonNumberItem = document.querySelector('[data-season-episode]');
@@ -197,7 +197,7 @@ function getSummary(seasonEpisodeId, seasonNumber){
 let seriesPicture = document.querySelector('[data-image]').src;
 function getEpisodes(seasonEpisodeId){
 
-    let seasonEpisodesEndpoint = `${baseEndpoint}/seasons/${seasonEpisodeId}/episodes`;
+    let seasonEpisodesEndpoint = `${baseEndpoint}/episode?seasonid=${seasonEpisodeId}`;
     fetch(seasonEpisodesEndpoint)
     .then(response => {
         if(!response.ok) {

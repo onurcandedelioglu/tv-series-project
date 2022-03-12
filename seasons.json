@@ -1,0 +1,16 @@
+[
+    {
+        "seasonId": 3,
+        "seriesId": 2,
+        "number": 1,
+        "premiered": "2011-09-22",
+        "summary": "Test"
+    },
+    {
+        "seasonId": 3,
+        "seriesId": 2,
+        "number": 1,
+        "premiered": "2011-09-22",
+        "summary": "Test"
+    }
+]

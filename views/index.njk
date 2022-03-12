@@ -2,10 +2,11 @@
 <html>
     
     <head>
-        <title>TvSeriesPlatform | Details</title>
+        <title>TvSeriesPlatform | Homepage</title>
         
+        <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.1/swiper-bundle.min.css">
         <link rel="stylesheet" href="./assets/scss/main.scss">
-        <link rel="stylesheet" href="./detailspage/details.scss">
+        <link rel="stylesheet" href="./homepage/home.scss">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,10 @@
         <meta name="description" content="">
         <meta charset="UTF-8">
 
-        <script src="./detailspage/details.js" defer></script>
+        <script src="https://unpkg.com/swiper@6.8.1/swiper-bundle.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+        <script src="./homepage/slider.js" defer></script>
+        <script src="./homepage/popular.js" defer></script>
         <script src="./homepage/search.js" defer></script>
 
     </head>
@@ -25,11 +29,11 @@
             {% include "./shared/menu.njk" %} 
         </header>
 
-        <div class="detailspage">
+        <div class="homepage">
         
-            {% include "./detailspage/seriesdetails.njk" %}
-            {% include "./detailspage/selectbox.njk" %}
-            {% include "./detailspage/season.njk" %}
+            {% include "./pages/homepage/slider.njk" %}
+            {% include "./pages/homepage/search.njk" %}
+            {% include "./pages/homepage/popular.njk" %}
 
         </div>
          
