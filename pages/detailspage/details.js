@@ -273,4 +273,3 @@ function selectBoxSeason(event){
     })
 }
 selectBox.addEventListener('change', selectBoxSeason);
-
