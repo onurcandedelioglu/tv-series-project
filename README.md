@@ -5,7 +5,7 @@ First you need write this code in terminal for installing packages.
 ```
 npm i
 ```
-After you can run project this commend.
+After you can run project this command.
 ```
 npm start
 ```
