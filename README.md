@@ -9,3 +9,11 @@ After you can run project this commend.
 ```
 npm start
 ```
+## Built with
+### Packages
+[Nunjucks](https://mozilla.github.io/nunjucks/) - Template Engine
+[Parcel](https://parceljs.org/) - Build Tool
+[SASS](https://sass-lang.com/) - Syntactically Awesome Style Sheets
+[Swiper](https://swiperjs.com/) - Slider Tool
+### API
+[TVmaze](https://www.tvmaze.com/) - Slider Tool
