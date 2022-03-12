@@ -9,6 +9,7 @@ After you can run project this commend.
 ```
 npm start
 ```
+Also you can see my project on [Netlify](https://mozilla.github.io/nunjucks/)
 ## Built with
 ### Packages
 [Nunjucks](https://mozilla.github.io/nunjucks/) - Template Engine \
@@ -16,4 +17,4 @@ npm start
 [SASS](https://sass-lang.com/) - Syntactically Awesome Style Sheets \
 [Swiper](https://swiperjs.com/) - Slider Tool
 ### API
-[TVmaze](https://www.tvmaze.com/) - Slider Tool
+[TVmaze](https://www.tvmaze.com/) - API
