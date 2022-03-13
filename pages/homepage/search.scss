@@ -1,0 +1,84 @@
+@import "../assets/scss/mixin/responsive.scss";
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 36px;
+    width: 100%;
+    max-width: 1200px;
+    &__aside{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+
+        width: 500px;
+        height: 36px;
+
+        border: 1px solid gray;
+        border-radius: 4px;
+
+        @include mq(mobile, max){
+            width: 300px;
+        }
+    }
+    &__item{
+        padding-left: 20px;
+        
+        height: 32px;
+        width: 383px;
+        
+        border: 0px;
+        border-right: 0px;
+        
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        
+        outline: none;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        
+        @include mq(mobile, max){
+            width: 183px;
+        }
+    }
+    ::placeholder{
+        color: rgb(255, 255, 255);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        opacity: 0.4;
+    }
+    &__button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 104px;
+        height: 34px;
+
+        border: 0px;
+        border-left: 0px;
+        
+        background-color: transparent;
+        color: rgb(183, 20, 30);
+
+        outline: none;
+        cursor: pointer;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        
+        @include mq(mobile, max){
+            height: 32px;
+        }
+    }
+}
+.-responsiveSearch{
+    margin: 10px 0px 10px 0px;
+    display: none;
+    @include mq(mobile, max){
+        display: flex;
+    }
+}

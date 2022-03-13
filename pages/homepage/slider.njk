@@ -1,0 +1,25 @@
+{% set imagesUrl = [
+    "https://static.tvmaze.com/uploads/images/medium_portrait/171/428042.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_portrait/173/433868.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_portrait/128/322484.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_portrait/0/1389.jpg",
+    "https://static.tvmaze.com/uploads/images/medium_portrait/257/644938.jpg"] 
+%}
+     
+
+<div class="swiper-container">
+
+    <div class="swiper-wrapper">
+        
+        {% for index in range(0,5) %}
+            <div class="swiper-slide">
+                <a data-link={{index}} class="swiper__link" href=""><img class="swiper__image" src={{imagesUrl[index]}}></a>
+            </div>
+        {% endfor %}
+        
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
