@@ -9,7 +9,7 @@ After you can run project this command.
 ```
 npm start
 ```
-Also you can see my project on [Netlify](https://mozilla.github.io/nunjucks/)
+Also you can see my project on [Netlify](https://tv-series-project.netlify.app/)
 ## Built with
 ### Packages
 [Nunjucks](https://mozilla.github.io/nunjucks/) - Template Engine \
