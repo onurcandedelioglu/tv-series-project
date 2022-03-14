@@ -22,7 +22,7 @@
     "nunjucks": "^3.2.3",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-nunjucks": "^2.2.2",
-    "sass": "^1.37.5",
-    "swiper": "^6.8.1"
+    "sass": "^1.49.9",
+    "swiper": "^6.8.4"
   }
 }
