@@ -16,5 +16,6 @@ Also you can see my project on [Netlify](https://tv-series-project.netlify.app/)
 [Parcel](https://parceljs.org/) - Build Tool \
 [SASS](https://sass-lang.com/) - Syntactically Awesome Style Sheets \
 [Swiper](https://swiperjs.com/) - Slider Tool
+[Color Thief](https://lokeshdhakar.com/projects/color-thief/) - Grab the color palette with js
 ### API
 [TVmaze](https://www.tvmaze.com/) - API
